@@ -72,6 +72,7 @@ function details(t){
     var lines=t.split("\n");
     var words=[];
     var wf=[];
+    
     lines.forEach((line)=>{
         let ww=line.split(" ");
         ww.forEach((w)=>{
@@ -84,7 +85,7 @@ function details(t){
             
         })
     })
-// read value
+    // console.log(words);
     let max=0;
     let w1="";
     for(let i=0;i<words.length;i++){
@@ -94,8 +95,7 @@ function details(t){
         }
     }
     console.log(w1);
+    (document.getElementById("stats")).innerHTML=`Document Length: ${t.length} <br> Words Count: ${words.length}`;
+
 
 }
-
-}
-
